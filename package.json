@@ -1,0 +1,59 @@
+{
+  "name": "eslint-config-frontwerk",
+  "version": "1.0.0",
+  "description": "Frontwerk's ESLint config",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives .",
+    "format": "prettier --write \"./rules/*.js\" \".index.js\"",
+    "test": "echo \"Write some tests next time\" && exit 0"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tricinel/eslint-frontwerk-config.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "config",
+    "frontwerk",
+    "javascript",
+    "styleguide",
+    "es2015",
+    "es2016",
+    "es2017",
+    "es2018"
+  ],
+  "author": "Bogdan Lazar <bogdan@bogdanlazar.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tricinel/eslint-config-frontwerk/issues"
+  },
+  "homepage": "https://frontwerk.org",
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-find-rules": "^3.4.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.7",
+    "lint-staged": "^9.4.1",
+    "precise-commits": "^1.0.2",
+    "prettier": "^1.18.2"
+  },
+  "peerDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-plugin-import": "^2.18.2"
+  },
+  "engines": {
+    "node": ">= 6"
+  },
+  "dependencies": {
+    "confusing-browser-globals": "^1.0.9"
+  }
+}
