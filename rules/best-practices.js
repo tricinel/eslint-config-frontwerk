@@ -176,6 +176,164 @@ module.exports = {
 
     // Disallow using the slash before a new line in a string
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-multi-str.md
-    'no-multi-str': 'error'
+    'no-multi-str': 'error',
+
+    // Disallow constructor calls using the "new" keyword that do not assign the resulting object to a variable
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-new.md
+    'no-new': 'error',
+
+    // Disallow creating functions using the Function constructor, e.g. new Function(...)
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-new-func.md
+    'no-new-func': 'error',
+
+    // Disallow the use of String, Number, and Boolean with the new operator, e.g. new String('foo') or new Number(42)
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-new-wrappers.md
+    'no-new-wrappers': 'error',
+
+    // Disallow the use of octal literals
+    // Octal literals are numerals that begin with a leading zero, such as let x = 071; // 57
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-octal.md
+    'no-octal': 'error',
+
+    // Disallow octal escape sequences in string literals, because they are deprecated
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-octal-escape.md
+    'no-octal-escape': 'error',
+
+    // Disallow modifying or reassigning function parameters
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-param-reassign.md
+    'no-param-reassign': ['error', { props: true }],
+
+    // Disallow accessing and/or changing the __proto__ property (deprecated)
+    // Use Object.getPrototypeOf or Object.setPrototypeOf instead
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-proto.md
+    'no-proto': 'error',
+
+    // Disallow variables that have multiple declarations in the same scope
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-redeclare.md
+    'no-redeclare': 'error',
+
+    // Disallow assignments in a return statement, e.g. return foo = bar + 1;
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-return-assign.md
+    'no-return-assign': ['error', 'always'],
+
+    // Disallow returning await; e.g. return await foo();
+    'no-return-await': 'error',
+
+    // Disallow javascript in hrefs, e.g. location.href = 'javascript:void(0)';
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-script-url.md
+    'no-script-url': 'error',
+
+    // No need to assign a variable to itself, e.g. foo = foo;
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-self-assign.md
+    'no-self-assign': 'error',
+
+    // No need to compare a variable with itself, e.g. if (foo === foo) {}
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-self-compare.md
+    'no-self-compare': 'error',
+
+    // Disallow the use of the comma operator, e.g. foo = bar, baz;
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-sequences.md
+    'no-sequences': 'error',
+
+    // Disallow throwing literals and other expressions which are not an Error object
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-throw-literal.md
+    'no-throw-literal': 'error',
+
+    // Warn against variables not being modified in a loop
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-unmodified-loop-condition.md
+    'no-unmodified-loop-condition': 'warn',
+
+    // Disallow an unused expression which has no effect on the state of the program
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-unused-expressions.md
+    'no-unused-expressions': [
+      'error',
+      {
+        allowShortCircuit: true, // e.g. a && b()
+        allowTernary: true, // e.g. a ? b() : c(),
+        allowTaggedTemplates: true // e.g. tag`some string`
+      }
+    ],
+
+    // Disallow unused labels
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-unused-labels.md
+    'no-unused-labels': 'error',
+
+    // Disallow usage of Function.prototype.call() and Function.prototype.apply() that can be replaced with the normal function invocation
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-call.md
+    'no-useless-call': 'error',
+
+    // Disallow catch clauses that only throw the caught error
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-catch.md
+    'no-useless-catch': 'error',
+
+    // Disallow the concatenation of 2 literals when they could be combined into a single literal
+    // e.g. var foo = 'some' + ' string'; could just be var foo = 'some string';
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-concat.md
+    'no-useless-concat': 'error',
+
+    // Disallow escapes that can be safely removed without changing behavior
+    // e.g. let foo = 'hol\a'; // foo = 'hola'
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-escape.md
+    'no-useless-escape': 'error',
+
+    // Disallow redundant return statements
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-return.md
+    'no-useless-return': 'error',
+
+    // Don't use the void operator
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-void.md
+    'no-void': 'error',
+
+    // Warn against comments that include any of the predefined terms
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-warning-comments.md
+    'no-warning-comments': [
+      'warn',
+      { terms: ['todo', 'fixme'], location: 'start' }
+    ],
+
+    // Disallow with statements
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-with.md
+    'no-with': 'error',
+
+    // Disallow using numbered capture groups instead of named capture groups in regular expressions
+    // I would leave this in, because why not?
+    // https://github.com/eslint/eslint/blob/master/docs/rules/prefer-named-capture-group.md
+    'prefer-named-capture-group': 'off',
+
+    // Ensure that Promises are only rejected with Error objects
+    // https://github.com/eslint/eslint/blob/master/docs/rules/prefer-promise-reject-errors.md
+    'prefer-promise-reject-errors': ['error', { allowEmptyReject: true }],
+
+    // Disallow the use of RegExp constructor functions with string literals as its args
+    // Does not disallow the usage for dynamically generated regular expressions
+    // e.g. new RegExp("abc"); // not ok
+    // e.g. new RegExp(pattern); // ok
+    // https://github.com/eslint/eslint/blob/master/docs/rules/prefer-regex-literals.md
+    'prefer-regex-literals': 'error',
+
+    // Always require the sometimes redundant radix (10) argument
+    // https://github.com/eslint/eslint/blob/master/docs/rules/radix.md
+    radix: 'error',
+
+    // Disallow declaring an async function without using await inside it
+    // We want to be able to create async functions designed to work with promises
+    // https://github.com/eslint/eslint/blob/master/docs/rules/require-await.md
+    'require-await': 'off',
+
+    // Enforce the use of u flag on regular expressions
+    // https://github.com/eslint/eslint/blob/master/docs/rules/require-unicode-regexp.md
+    'require-unicode-regexp': 'off',
+
+    // Enforce keeping variable declarations at the top
+    // https://github.com/eslint/eslint/blob/master/docs/rules/vars-on-top.md
+    'vars-on-top': 'error',
+
+    // Require all immediately-invoked function expressions to be wrapped in parentheses
+    // https://github.com/eslint/eslint/blob/master/docs/rules/wrap-iife.md
+    'wrap-iife': ['error', 'outside', { functionPrototypeMethods: false }],
+
+    // Compare a literal to a variable you must not
+    // https://github.com/eslint/eslint/blob/master/docs/rules/yoda.md
+    yoda: 'error'
   }
 };
