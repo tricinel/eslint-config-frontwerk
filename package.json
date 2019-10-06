@@ -4,9 +4,10 @@
   "description": "Frontwerk's ESLint config",
   "main": "index.js",
   "scripts": {
+    "prelint": "eclint check * rules/*",
     "lint": "eslint --report-unused-disable-directives rules/*.js",
     "format": "prettier --write \"./rules/*.js\" \".index.js\"",
-    "test": "echo \"Write some tests next time\" && exit 0"
+    "test": "jest"
   },
   "lint-staged": {
     "*.js": [
@@ -36,12 +37,14 @@
   },
   "homepage": "https://frontwerk.org",
   "devDependencies": {
+    "eclint": "^2.8.1",
     "eslint": "^6.5.1",
     "eslint-config-prettier": "^6.3.0",
     "eslint-find-rules": "^3.4.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.7",
+    "jest": "^24.9.0",
     "lint-staged": "^9.4.1",
     "precise-commits": "^1.0.2",
     "prettier": "^1.18.2"
