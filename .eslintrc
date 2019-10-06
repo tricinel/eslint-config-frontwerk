@@ -1,6 +1,9 @@
 {
+  "env": {
+    "jest/globals": true
+  },
   "extends": ["./index.js", "plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "jest"],
   "rules": {
     "prettier/prettier": "error"
   }
