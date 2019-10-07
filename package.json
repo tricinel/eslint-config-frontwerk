@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "Frontwerk's ESLint config",
   "main": "index.js",
+  "files": [
+    "index.js",
+    "rules",
+    "plugins"
+  ],
   "scripts": {
     "prelint": "eclint check * rules/* plugins/*",
     "lint": "eslint --report-unused-disable-directives rules/*.js",
