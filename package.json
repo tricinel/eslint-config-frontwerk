@@ -19,6 +19,9 @@
       "eslint"
     ]
   },
+  "eslintIgnore": [
+    "node_modules"
+  ],
   "repository": {
     "type": "git",
     "url": "git@github.com:tricinel/eslint-frontwerk-config.git"
