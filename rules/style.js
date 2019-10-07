@@ -207,6 +207,277 @@ module.exports = {
 
     // Enforce newlines between the operands of a ternary expression only if the expression spans multiple lines
     // https://github.com/eslint/eslint/blob/master/docs/rules/multiline-ternary.md
-    'multiline-ternary': ['error', 'always-multiline']
+    'multiline-ternary': ['error', 'always-multiline'],
+
+    // Require constructor names to begin with a capital letter
+    // https://github.com/eslint/eslint/blob/master/docs/rules/new-cap.md
+    'new-cap': 'error',
+
+    // Enforce the use of parentheses when invoking a constructor with no arguments
+    // https://github.com/eslint/eslint/blob/master/docs/rules/new-parens.md
+    'new-parens': 'error',
+
+    // Require a new line after each call in a method chain
+    // Allow 2 calls max, e.g. foo.map().filter()
+    // https://github.com/eslint/eslint/blob/master/docs/rules/newline-per-chained-call.md
+    'newline-per-chained-call': ['error', { ignoreChainWithDepth: 2 }],
+
+    // Disallow Array constructors
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-array-constructor.md
+    'no-array-constructor': 'error',
+
+    // Disallow the use of bitwise operators
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-bitwise.md
+    'no-bitwise': 'error',
+
+    // Disallow the use of continue statements
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-continue.md
+    'no-continue': 'error',
+
+    // Allow the use of comments on the same line as code
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-inline-comments.md
+    'no-inline-comments': 'off',
+
+    // Disallow if statements as the only statement in else blocks
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-lonely-if.md
+    'no-lonely-if': 'error',
+
+    //
+    'no-mixed-operators': [
+      'error',
+      {
+        // The list of arthmetic groups disallows mixing "%" and "**" with other arithmetic operators
+        // Taken from airbnb's styleguide (https://github.com/airbnb/javascript/blob/master/packages/eslint-config-airbnb-base/rules/style.js)
+        groups: [
+          ['%', '**'],
+          ['%', '+'],
+          ['%', '-'],
+          ['%', '*'],
+          ['%', '/'],
+          ['/', '*'],
+          ['&', '|', '<<', '>>', '>>>'],
+          ['==', '!=', '===', '!=='],
+          ['&&', '||']
+        ],
+        allowSamePrecedence: false
+      }
+    ],
+
+    // Disallow mixed spaces and tabs for indentation
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-mixed-spaces-and-tabs.md
+    'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+
+    // Disallow using multiple assignments within a single statement
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-multi-assign.md
+    'no-multi-assign': 'error',
+
+    // Disallow multiple empty lines
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-multiple-empty-lines.md
+    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1, maxBOF: 0 }],
+
+    // Warn against negated conditions in if statments with an else branch and ternary expressions
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-negated-condition.md
+    'no-negated-condition': 'warn',
+
+    // Warn against using nested ternary expressions
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-nested-ternary.md
+    'no-nested-ternary': 'warn',
+
+    // Disallow the use of the Object constructor
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-new-object.md
+    'no-new-object': 'error',
+
+    // Disallow the use of unary operators (++ and --)
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-plusplus.md
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
+
+    // Disallow Labels and With statements
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-restricted-syntax.md
+    'no-restricted-syntax': [
+      'error',
+      {
+        selector: 'LabeledStatement',
+        message:
+          'Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand.'
+      },
+      {
+        selector: 'WithStatement',
+        message:
+          '`with` is disallowed in strict mode because it makes code impossible to predict and optimize.'
+      }
+    ],
+
+    // Disallow the use of the tab character, including indentation
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-tabs.md
+    'no-tabs': 'error',
+
+    // Allow the use of ternary expressions
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-ternary.md
+    'no-ternary': 'off',
+
+    // Disallow trailing whitespace at the end of lines
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-trailing-spaces.md
+    'no-trailing-spaces': 'error',
+
+    // Disallow dangling underscores in identifiers
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-underscore-dangle.md
+    'no-underscore-dangle': 'error',
+
+    // Disallow ternary operators when simpler alternatives exist
+    // var foo = bar === 1 ? true : false; // not ok
+    // var foo = bar === 1; // ok
+    // https://github.com/eslint/eslint/tree/master/docs/rules/no-unneeded-ternary.md
+    'no-unneeded-ternary': ['error', { defaultAssignment: false }],
+
+    // Disallow whitespace around the dot or before the opening bracket before properties of objects if they are on the same line
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-whitespace-before-property.md
+    'no-whitespace-before-property': 'error',
+
+    // Enforce consistent location for single-line statements
+    // This is off because the curly rule is on
+    // https://github.com/eslint/eslint/blob/master/docs/rules/nonblock-statement-body-position.md
+    'nonblock-statement-body-position': 'off',
+
+    // Require line breaks inside curly braces
+    // https://github.com/eslint/eslint/blob/master/docs/rules/object-curly-newline.md
+    'object-curly-newline': ['error', { consistent: true }],
+
+    // Enforce consistent spacing inside braces of object literals, destructuring assignments, and import/export specifiers
+    // https://github.com/eslint/eslint/blob/master/docs/rules/object-curly-spacing.md
+    'object-curly-spacing': ['error', 'always'],
+
+    // Ensure that property specifications appear on separate lines
+    // https://github.com/eslint/eslint/blob/master/docs/rules/object-property-newline.md
+    'object-property-newline': [
+      'error',
+      {
+        allowAllPropertiesOnSameLine: true
+      }
+    ],
+
+    // Require multiple variable declarations per scope for let and const
+    // Allow multiple variable declarations per scope but requires consecutive variable declarations to be combined into a single declaration, only for var
+    // https://github.com/eslint/eslint/blob/master/docs/rules/one-var.md
+    'one-var': ['error', { var: 'consecutive', let: 'never', const: 'never' }],
+
+    // Require a new line around variable declarations
+    // https://github.com/eslint/eslint/blob/master/docs/rules/one-var-declaration-per-line.md
+    'one-var-declaration-per-line': ['error', 'always'],
+
+    // Require assignment operator shorthand where possible
+    // https://github.com/eslint/eslint/blob/master/docs/rules/operator-assignment.md
+    'operator-assignment': ['error', 'always'],
+
+    // Require linebreaks to be placed before the operator, except for "="
+    // foo = bar
+    //      ? 2
+    //      : 3;
+    // https://github.com/eslint/eslint/blob/master/docs/rules/operator-linebreak.md
+    'operator-linebreak': ['error', 'before', { overrides: { '=': 'none' } }],
+
+    // Disallow blank lines before and after block statements
+    // https://github.com/eslint/eslint/blob/master/docs/rules/padded-blocks.md
+    'padded-blocks': ['error', 'never'],
+
+    // Enforce a certain number of blank lines between 2 given kinds of statements
+    // Developers need to configure this if they want to
+    // https://github.com/eslint/eslint/blob/master/docs/rules/padding-line-between-statements.md
+    'padding-line-between-statements': 'off',
+
+    // Whenever possible, require object spread to Object.assign()
+    // https://github.com/eslint/eslint/blob/master/docs/rules/prefer-object-spread.md
+    'prefer-object-spread': 'error',
+
+    // Require quotes around object literal property names as needed
+    // https://github.com/eslint/eslint/blob/master/docs/rules/quote-props.md
+    'quote-props': ['error', 'as-needed'],
+
+    // Enforce single quotes where needed
+    // https://github.com/eslint/eslint/blob/master/docs/rules/quotes.md
+    quotes: [
+      'error',
+      'single',
+      { avoidEscape: true, allowTemplateLiterals: true }
+    ],
+
+    // Require semicolons at the end of statements
+    // https://github.com/eslint/eslint/blob/master/docs/rules/semi.md
+    semi: ['error', 'always'],
+
+    // Require space after the semicolon and not before it
+    // https://github.com/eslint/eslint/blob/master/docs/rules/semi-spacing.md
+    'semi-spacing': ['error', { before: false, after: true }],
+
+    // Enforce that semicolons are at the end of statements and not at the beginning
+    // https://github.com/eslint/eslint/tree/master/docs/rules/semi-style.md
+    'semi-style': ['error', 'last'],
+
+    // Check that all property definitions for objects are sorted alphabetyically
+    // No...why?!
+    // https://github.com/eslint/eslint/tree/master/docs/rules/sort-keys.md
+    'sort-keys': 'off',
+
+    // Check that all variable declarations are sorted alphabetyically
+    // No...why?!
+    // https://github.com/eslint/eslint/blob/master/docs/rules/sort-vars.md
+    'sort-vars': 'off',
+
+    // Require that blocks always have at least one preceding space
+    // https://github.com/eslint/eslint/blob/master/docs/rules/space-before-blocks.md
+    'space-before-blocks': ['error', 'always'],
+
+    // Disallow a space before the function opening parenthesis, except for async functions
+    // https://github.com/eslint/eslint/blob/master/docs/rules/space-before-function-paren.md
+    'space-before-function-paren': [
+      'error',
+      {
+        anonymous: 'never',
+        named: 'never',
+        asyncArrow: 'always'
+      }
+    ],
+
+    // Disallow spaces inside the parentheses
+    // https://github.com/eslint/eslint/blob/master/docs/rules/space-in-parens.md
+    'space-in-parens': ['error', 'never'],
+
+    // Require spaces around infix operators
+    // foo+bar //not ok
+    // foo + bar //ok
+    // var foo = bar|0 // also ok
+    // https://github.com/eslint/eslint/blob/master/docs/rules/space-infix-ops.md
+    'space-infix-ops': ['error', { int32Hint: true }],
+
+    // Require spaces before and after unary operators, on a case by case basis
+    // words are new, delete, typeof, void, yield
+    // nonwords are -, +, --, ++, !, !!
+    // https://github.com/eslint/eslint/blob/master/docs/rules/space-unary-ops.md
+    'space-unary-ops': [
+      'error',
+      {
+        words: true,
+        nonwords: false
+      }
+    ],
+
+    // Require spaces at the beginning of the comments
+    // https://github.com/eslint/eslint/blob/master/docs/rules/spaced-comment.md
+    'spaced-comment': ['error', 'always'],
+
+    // Require a space after colons in switch statements and no space before
+    // https://github.com/eslint/eslint/blob/master/docs/rules/switch-colon-spacing.md
+    'switch-colon-spacing': ['error', { after: true, before: false }],
+
+    // Disallow spaces between a tag function and its template literal
+    // https://github.com/eslint/eslint/blob/master/docs/rules/template-tag-spacing.md
+    'template-tag-spacing': ['error', 'never'],
+
+    // Require that files not begin with the Unicode BOM (U+FEFF)
+    // https://github.com/eslint/eslint/blob/master/docs/rules/unicode-bom.md
+    'unicode-bom': ['error', 'never'],
+
+    // Require to wrap the regex to disambiguate the slash operator and facilitates more readable code
+    // https://github.com/eslint/eslint/blob/master/docs/rules/wrap-regex.md
+    'wrap-regex': 'error'
   }
 };
