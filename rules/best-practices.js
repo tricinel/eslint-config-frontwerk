@@ -248,9 +248,9 @@ module.exports = {
     'no-unused-expressions': [
       'error',
       {
-        allowShortCircuit: true, // a && b()
-        allowTernary: true, // a ? b() : c(),
-        allowTaggedTemplates: true // tag`some string`
+        allowShortCircuit: true, // For example a && b()
+        allowTernary: true, // For example  a ? b() : c(),
+        allowTaggedTemplates: true // For example  tag`some string`
       }
     ],
 

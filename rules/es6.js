@@ -56,9 +56,9 @@ module.exports = {
     'no-dupe-class-members': 'error',
 
     // Require that all imports from a single module exists in a single import statement
-    // FIXME: disable this when adding eslint-plugin-import (https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)
+    // This is disabled because it's handled with eslint-plugin-import (https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-duplicate-imports.md
-    'no-duplicate-imports': 'error',
+    'no-duplicate-imports': 'off',
 
     // Disallow calling Symbol with the new operator
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-new-symbol.md
