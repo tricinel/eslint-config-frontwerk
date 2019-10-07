@@ -1,7 +1,7 @@
 # eslint-config-frontwerk
 
-![Npm version][npm-version-badge] ![Node Version][node-version-badge]
-[![Npm downloads][npm-downloads-badge]][npm-downloads] ![License][license-badge]
+![Node Version][node-version-badge] ![Npm version][npm-version-badge]
+[![Npm downloads][npm-downloads-badge]][npm-downloads-badge] ![License][license-badge]
 
 This package provides [Frontwerk][frontwerkorg]'s JavaScript .eslintrc (without React or Typescript) as an extensible shared [ESLint][eslint] config.
 
