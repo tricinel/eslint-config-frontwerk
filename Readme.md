@@ -26,6 +26,8 @@ yarn add --dev eslint-config-frontwerk eslint-plugin-import
 - Run tests with `npm run test` or `yarn test`.
 - Run the lint with `npm run lint` or `yarn lint`.
 
+For details, check out the [Contributing][contributing] guide.
+
 # LICENSE
 
 MIT
@@ -37,3 +39,4 @@ MIT
 [license-badge]: https://img.shields.io/npm/l/eslint-config-frontwerk.svg?style=flat-square
 [npm-version-badge]: https://img.shields.io/npm/v/eslint-config-frontwerk.svg?style=flat-square
 [npm-downloads-badge]: https://img.shields.io/npm/dt/eslint-config-frontwerk.svg?style=flat-square
+[contributing]: ./Contributing.md
