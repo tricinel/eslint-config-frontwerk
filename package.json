@@ -12,6 +12,7 @@
     "prelint": "eclint check * rules/* plugins/*",
     "lint": "eslint --report-unused-disable-directives rules/*.js",
     "format": "prettier --write \"./rules/*.js\" \".index.js\"",
+    "prepublishOnly": "eslint-find-rules --unused",
     "test": "jest"
   },
   "lint-staged": {
