@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-frontwerk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Frontwerk's ESLint config",
   "main": "index.js",
   "files": [
