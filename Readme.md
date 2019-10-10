@@ -24,6 +24,7 @@ yarn add --dev eslint-config-frontwerk eslint-plugin-import
 ## Related
 
 - If you're a TypeScript user, you might want to check out [eslint-config-frontwerk-typescript][eslint-config-frontwerk-typescript].
+- If you're using [ReactJS][reactjs], check out [eslint-config-frontwerk-react][eslint-config-frontwerk-react].
 
 ## Contributing
 
@@ -45,3 +46,5 @@ MIT
 [npm-downloads-badge]: https://img.shields.io/npm/dt/eslint-config-frontwerk.svg?style=flat-square
 [contributing]: ./Contributing.md
 [eslint-config-frontwerk-typescript]: https://github.com/tricinel/eslint-config-frontwerk-typescript
+[reactjs]: https://reactjs.org/
+[eslint-config-frontwerk-react]: https://github.com/tricinel/eslint-config-frontwerk-react
