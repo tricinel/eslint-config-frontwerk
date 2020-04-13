@@ -1,3 +1,9 @@
+### v1.0.2
+
+---
+
+- Nothing major, just dependencies upgraded
+
 ### v1.0.1
 
 ---
