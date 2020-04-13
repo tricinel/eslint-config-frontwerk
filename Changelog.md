@@ -2,6 +2,7 @@
 
 ---
 
+- Add new rules: grouped-accessor-pairs, no-constructor-return, no-dupe-else-if, no-setter-return, prefer-exponentiation-operator
 - Nothing major, just dependencies upgraded
 
 ### v1.0.1

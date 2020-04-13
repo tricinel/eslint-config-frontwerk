@@ -44,6 +44,10 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-dupe-args.md
     'no-dupe-args': 'error',
 
+    // Disallow two identical test conditions in the same chain
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-dupe-else-if.md
+    'no-dupe-else-if': 'error',
+
     // Disallow the use of duplicate keys in object literals
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-dupe-keys.md
     'no-dupe-keys': 'error',
@@ -121,6 +125,10 @@ module.exports = {
     // Disallow use of multiple spaces in a regular expression
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-regex-spaces.md
     'no-regex-spaces': 'error',
+
+    // Property setters shouldn't return anything
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-setter-return.md
+    'no-setter-return': 'error',
 
     // Disallow sparse array literals which have "holes", e.g. [1,,2]
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-sparse-arrays.md

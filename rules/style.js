@@ -384,6 +384,11 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/padding-line-between-statements.md
     'padding-line-between-statements': 'off',
 
+    // Disallow the use of Math.pow in favor of the ** operator
+    // Developers need to configure this if they want to
+    // https://github.com/eslint/eslint/blob/master/docs/rules/prefer-exponentiation-operator.md
+    'prefer-exponentiation-operator': 'off',
+
     // Whenever possible, require object spread to Object.assign()
     // https://github.com/eslint/eslint/blob/master/docs/rules/prefer-object-spread.md
     'prefer-object-spread': 'error',

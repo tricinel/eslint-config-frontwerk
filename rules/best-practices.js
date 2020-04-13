@@ -49,6 +49,11 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/eqeqeq.md
     eqeqeq: ['error', 'smart'],
 
+    // Prefer accessoir pairs in object literals and classes to be defined adjacent to each other
+    // The getter should come first, followed by the setter, if both are declared
+    // https://github.com/eslint/eslint/blob/master/docs/rules/grouped-accessor-pairs.md
+    'grouped-accessor-pairs': ['error', 'getBeforeSet'],
+
     // Disallow not filtering the results in a "for in" loop, e.g. with hasOwnProperty
     // https://github.com/eslint/eslint/blob/master/docs/rules/guard-for-in.md
     'guard-for-in': 'error',
@@ -69,6 +74,11 @@ module.exports = {
     // Disallow lexical declarations (let, const, function and class) in case/default clauses
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-case-declarations.md
     'no-case-declarations': 'error',
+
+    // Disallow returning a value in the constructor
+    // You can still use return for flow control
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-constructor-return.md
+    'no-constructor-return': 'error',
 
     // Require regex literals to escape division operators
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-div-regex.md
