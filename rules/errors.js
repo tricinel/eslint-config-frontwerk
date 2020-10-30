@@ -110,6 +110,10 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-irregular-whitespace.md
     'no-irregular-whitespace': 'error',
 
+    // Disallow the use of number literals that immediately lose precision at runtime when converted to a JS Number due to 64-bit floating-point rounding
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-loss-of-precision.md
+    'no-loss-of-precision': 'error',
+
     // Disallow the use of multiple code point characters in character class syntax
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-misleading-character-class.md
     'no-misleading-character-class': 'error',
@@ -117,6 +121,11 @@ module.exports = {
     // Disallow trying to execute some global objects as functions, i.e. Math() or JSON()
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-obj-calls.md
     'no-obj-calls': 'error',
+
+    // Disallow returning values from Promise executor functions
+    // A promise's executor should always call resolve with the result, or reject if an error occurred
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-promise-executor-return.md
+    'no-promise-executor-return': 'error',
 
     // Disallow the direct use of Object.prototypes builtins, e.g. foo.hasOwnProperty('bar')
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-prototype-builtins.md
@@ -138,13 +147,17 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-template-curly-in-string.md
     'no-template-curly-in-string': 'error',
 
-    // Disallow confusing multiline expressions where a newline looks like it is ending a statement, but is not.
+    // Disallow confusing multiline expressions where a newline looks like it is ending a statement, but is not
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-unexpected-multiline.md
     'no-unexpected-multiline': 'error',
 
     // Disallow unreachable statements after a return, throw, continue, or break statement
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-unreachable.md
     'no-unreachable': 'error',
+
+    // Disallow loops with a body that allows only one iteration
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-unreachable-loop.md
+    'no-unreachable-loop': 'error',
 
     // Disallow the use of return, throw, break, or continue is used in finally blocks
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-unsafe-finally.md
@@ -153,6 +166,11 @@ module.exports = {
     // Disallow negating the left operand of Relational Operators (i.e. "in" and "instanceof")
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-unsafe-negation.md
     'no-unsafe-negation': 'error',
+
+    // Disallow useless backreferences in regular expressions
+    // i.e. where the match will always be zero-length (the empty string)
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-backreference.md
+    'no-useless-backreference': 'error',
 
     // Disallow assignments that can lead to race conditions due to usage of await or yield
     // https://github.com/eslint/eslint/blob/master/docs/rules/require-atomic-updates.md

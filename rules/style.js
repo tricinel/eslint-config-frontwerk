@@ -89,10 +89,10 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/function-paren-newline.md
     'function-paren-newline': ['error', 'consistent'],
 
-    // Blacklist certain identifiers, e.g. data, callback, error
+    // Deny usage of certain identifiers, e.g. data, callback, error
     // Developers should handle this if they want to
-    // https://github.com/eslint/eslint/blob/master/docs/rules/id-blacklist.md
-    'id-blacklist': 'off',
+    // https://github.com/eslint/eslint/blob/master/docs/rules/id-denylist.md
+    'id-denylist': 'off',
 
     // Enforce a minimum and/or maximum identifier length convention
     // Developers should handle this if they want to

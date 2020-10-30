@@ -33,6 +33,10 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/default-case.md
     'default-case': ['error', { commentPattern: '^no default$' }],
 
+    // Enforce default cases in switch statements to be last
+    // https://github.com/eslint/eslint/blob/master/docs/rules/default-case-last.md
+    'default-case-last': 'error',
+
     // Enforce default parameters to be the last parameters in the function definition
     // https://github.com/eslint/eslint/blob/master/docs/rules/default-param-last.md
     'default-param-last': 'error',

@@ -64,6 +64,16 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-new-symbol.md
     'no-new-symbol': 'error',
 
+    // Disallow specified names in exports
+    // We disallow `default` and `then`. This means you cannot do `export { default, then }`
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-restricted-exports.md
+    'no-restricted-exports': [
+      'error',
+      {
+        restrictedNamedExports: ['default', 'then']
+      }
+    ],
+
     // Disallow importing certain modules
     // We need to leave this for each developer to decide
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-restricted-imports.md

@@ -1,3 +1,11 @@
+### v1.1.0
+
+---
+
+- Add new rules: default-case-last, no-loss-of-precision, no-promise-executor-return, no-unreachable-loop, no-useless-backreference, no-restricted-exports,
+- Replace id-blacklist with id-denylist
+- Upgrade dependencies
+
 ### v1.0.2
 
 ---
