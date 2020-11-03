@@ -1,3 +1,9 @@
+### v1.1.1
+
+---
+
+- Enforce function declaration instead of function expressions (was previously enforcing expressions)
+
 ### v1.1.0
 
 ---

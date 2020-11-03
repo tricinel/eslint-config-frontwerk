@@ -75,11 +75,18 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/func-names.md
     'func-names': ['error', 'as-needed'],
 
-    // Enforce function expressions instead of function declarations
-    // function foo() {} // not ok
-    // var foo = function() {} // ok
+    // Enforce function declaration instead of function expressions
+    // function foo() {} // ok
+    // var foo = function() {} // not ok
+    // const foo = () => {} // ok
     // https://github.com/eslint/eslint/blob/master/docs/rules/func-style.md
-    'func-style': ['error', 'expression'],
+    'func-style': [
+      'error',
+      'declaration',
+      {
+        allowArrowFunctions: true
+      }
+    ],
 
     // Require consistent use of line breaks between arguments of a function call
     // https://github.com/eslint/eslint/blob/master/docs/rules/function-call-argument-newline.md
