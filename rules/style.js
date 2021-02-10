@@ -326,9 +326,9 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-trailing-spaces.md
     'no-trailing-spaces': 'error',
 
-    // Disallow dangling underscores in identifiers
+    // Disallow dangling underscores in identifiers, but allow after the `this` keyword
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-underscore-dangle.md
-    'no-underscore-dangle': 'error',
+    'no-underscore-dangle': ['error', { allowAfterThis: true }],
 
     // Disallow ternary operators when simpler alternatives exist
     // var foo = bar === 1 ? true : false; // not ok
