@@ -204,6 +204,10 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-new-wrappers.md
     'no-new-wrappers': 'error',
 
+    // Disallow \8 and \9 escape sequences in string literals
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-nonoctal-decimal-escape.md
+    'no-nonoctal-decimal-escape': 'error',
+
     // Disallow the use of octal literals
     // Octal literals are numerals that begin with a leading zero, such as let x = 071; // 57
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-octal.md

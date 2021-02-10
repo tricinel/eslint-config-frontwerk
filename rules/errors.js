@@ -167,6 +167,10 @@ module.exports = {
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-unsafe-negation.md
     'no-unsafe-negation': 'error',
 
+    // Disallow use of optional chaining in contexts where the undefined value is not allowed
+    // https://github.com/eslint/eslint/blob/master/docs/rules/no-unsafe-optional-chaining.md
+    'no-unsafe-optional-chaining': 'error',
+
     // Disallow useless backreferences in regular expressions
     // i.e. where the match will always be zero-length (the empty string)
     // https://github.com/eslint/eslint/blob/master/docs/rules/no-useless-backreference.md

@@ -1,3 +1,10 @@
+### v1.1.2
+
+---
+
+- Allow underscore dangle after the `this` keyword
+- Add new rules: `no-nonoctal-decimal-escape`, `no-unsafe-optional-chaining`
+
 ### v1.1.1
 
 ---
